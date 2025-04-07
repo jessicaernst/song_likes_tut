@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:song_likes_tut/features/song_likes/data/like_model.dart';
+import 'package:song_likes_tut/features/song_likes/data/song.dart';
 import 'package:song_likes_tut/features/song_likes/widgets/song_tile.dart';
 
 class SongListPage extends StatelessWidget {
   SongListPage({super.key});
 
-  final List<String> songs = [
-    'Dancehall Caballeros',
-    'Schüttel deinen Speck',
-    'Toxic',
-    'Hot in Herre',
+  final List<Song> songs = [
+    Song(title: 'Dancehall Caballeros'),
+    Song(title: 'Schüttel deinen Speck'),
+    Song(title: 'Toxic'),
+    Song(title: 'Hot in Herre'),
   ];
 
   @override
@@ -41,7 +42,7 @@ class SongListPage extends StatelessWidget {
           ),
           Expanded(
             child: ListView(
-              children: songs.map((title) => SongTile(title: title)).toList(),
+              children: songs.map((song) => SongTile(song: song)).toList(),
             ),
           ),
         ],
