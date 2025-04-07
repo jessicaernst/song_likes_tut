@@ -20,6 +20,7 @@ und zählt die Gesamtanzahl aller Likes. Zusätzlich gibt es einen Button, um al
 
 ## 🗂 Projektstruktur
 
+```
 lib/
 ├── app.dart                      # App-Konfiguration und Routing (optional)
 ├── main.dart                     # Einstiegspunkt der App
@@ -31,3 +32,4 @@ lib/
 │       │   └── song_list_page.dart       # Hauptseite mit Song-Liste und Gesamt-Likes
 │       └── widgets/
 │           └── song_tile.dart            # Widget für einzelne Songs mit Like-Button
+```
