@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-// LikeModel erbt von ChangeNotifier, um Änderungen zu signalisieren.
+// LikeNotifier erbt von ChangeNotifier, um Änderungen zu signalisieren.
 // Dies ist notwendig, damit Provider weiß, wann es die Widgets neu aufbauen muss.
-class LikeModel extends ChangeNotifier {
+class LikeNotifier extends ChangeNotifier {
   final Map<String, bool> _likes = {};
 
   // Gibt zurück, ob ein Song geliked wurde.

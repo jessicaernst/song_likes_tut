@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:song_likes_tut/app.dart';
-import 'package:song_likes_tut/features/song_likes/data/like_model.dart';
+import 'package:song_likes_tut/features/song_likes/data/like_notifier.dart';
 
 void main() {
   runApp(
@@ -10,6 +10,6 @@ void main() {
     // child: App() ist die App, die mit dem LikeModel versorgt wird.
     // Der BuildContext muss hier nicht mitgegeben werden und kann mit dem Platzhalter _ ersetzt werden
     // wenn die App größer werden würde und man die likes an vielen Stellen brauchen würde dann würde man da den Context reingeben
-    ChangeNotifierProvider(create: (_) => LikeModel(), child: const App()),
+    ChangeNotifierProvider(create: (_) => LikeNotifier(), child: const App()),
   );
 }

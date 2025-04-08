@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:song_likes_tut/features/song_likes/data/like_model.dart';
+import 'package:song_likes_tut/features/song_likes/data/like_notifier.dart';
 import 'package:song_likes_tut/features/song_likes/data/song.dart';
 
 class SongTile extends StatelessWidget {
@@ -12,7 +12,7 @@ class SongTile extends StatelessWidget {
   Widget build(BuildContext context) {
     // Consumer<LikeModel> ist ein Widget, das auf Änderungen in LikeModel hört.
     // Es baut sich neu auf, wenn notifyListeners() in LikeModel aufgerufen wird.
-    return Consumer<LikeModel>(
+    return Consumer<LikeNotifier>(
       // Der Builder wird jedes Mal aufgerufen, wenn sich LikeModel ändert.
       builder: (context, likeModel, child) {
         // Hier greifen wir auf die Methode isLiked() in LikeModel zu, um zu prüfen, ob der Song geliked wurde.

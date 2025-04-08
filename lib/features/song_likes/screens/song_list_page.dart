@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:song_likes_tut/features/song_likes/data/like_model.dart';
+import 'package:song_likes_tut/features/song_likes/data/like_notifier.dart';
 import 'package:song_likes_tut/features/song_likes/data/song.dart';
 import 'package:song_likes_tut/features/song_likes/widgets/song_tile.dart';
 
@@ -19,7 +19,7 @@ class SongListPage extends StatelessWidget {
     // Hier holen wir uns die Instanz von LikeModel, die wir in main.dart erstellt haben.
     // Provider.of<LikeModel>(context) sucht im Widget-Baum nach einem LikeModel und gibt es zurück.
     // Dies ermöglicht es uns, auf die Daten und Methoden von LikeModel zuzugreifen.
-    final likeModel = Provider.of<LikeModel>(context);
+    final likeModel = Provider.of<LikeNotifier>(context);
 
     return Scaffold(
       appBar: AppBar(title: const Text('Songs & Likes')),
