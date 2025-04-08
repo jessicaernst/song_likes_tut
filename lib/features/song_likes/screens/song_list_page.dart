@@ -16,9 +16,9 @@ class SongListPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Hier holen wir uns die Instanz von LikeModel, die wir in main.dart erstellt haben.
-    // Provider.of<LikeModel>(context) sucht im Widget-Baum nach einem LikeModel und gibt es zurück.
-    // Dies ermöglicht es uns, auf die Daten und Methoden von LikeModel zuzugreifen.
+    // Hier holen wir uns die Instanz von LikeNotifier, die wir in main.dart erstellt haben.
+    // Provider.of<LikeNotifier>(context) sucht im Widget-Baum nach einem LikeNotifier und gibt es zurück.
+    // Dies ermöglicht es uns, auf die Daten und Methoden von LikeNotifier zuzugreifen.
     final likeNotifier = Provider.of<LikeNotifier>(context);
 
     return Scaffold(
@@ -27,7 +27,7 @@ class SongListPage extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.all(16.0),
-            // Hier greifen wir auf die Methode totalLikes in LikeModel zu, um die Gesamtzahl der Likes anzuzeigen.
+            // Hier greifen wir auf die Methode totalLikes in LikeNotifier zu, um die Gesamtzahl der Likes anzuzeigen.
             child: Text(
               'Gesamt-Likes: ${likeNotifier.totalLikes}',
               style: const TextStyle(fontSize: 20),
@@ -35,7 +35,7 @@ class SongListPage extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () {
-              // Ruft die Methode resetLikes() in LikeModel auf, um alle Likes zurückzusetzen.
+              // Ruft die Methode resetLikes() in LikeNotifier auf, um alle Likes zurückzusetzen.
               likeNotifier.resetLikes();
             },
             child: const Text('Likes zurücksetzen'),
